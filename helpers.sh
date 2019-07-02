@@ -19,22 +19,17 @@ function echo_info() {
 function _update() {
   if [[ $1 != "system" ]]; then
     echo_info "Updating system packages..."
-    sudo "$PKGMN" "$PKGU" "${PKGOPT[@]}"
+    sudo pacman -Syu --needed --noconfirm
   else
     echo_info "Updating ${1}..."
-    sudo "$PKGMN" "$PKGI" "$1"
+    sudo pacman -Sy "$1"
   fi
 }
 
 function _install() {
   if [[ $1 == "core" ]]; then
     for pkg in "${PKG[@]}"; do
-      echo_info "Installing ${pkg}..."
-      if ! [ -x "$(command -v rainbow)" ]; then
-        sudo "$PKGMN" "$PKGI" "$pkg" "${PKGOPT[@]}"
-      else
-        rainbow --red=error --yellow=warning sudo "$PKGMN" "$PKGI" "$pkg" "${PKGOPT[@]}"
-      fi
+      sudo pacman -Sy "$pkg" --needed --noconfirm
       echo_done "${pkg} installed!"
     done
   elif [[ $1 == "aur" ]]; then
@@ -45,18 +40,12 @@ function _install() {
     done
   else
     echo_info "Intalling ${1}..."
-    sudo "$PKGMN" "$PKGI" "$1"
+    sudo pacman -Sy "$1"
   fi
 }
 
-function _install_yay() {
-  cd yay || exit
-  ./install.sh
-  cd ..
-}
-
 function _symlink() {
-  dirs=$(find . -maxdepth 1 -mindepth 1 -type d -not -name '.git' -not -name 'yay' -print)
+  dirs=$(find . -maxdepth 1 -mindepth 1 -type d -not -name '.git' -print)
 
   for dir in $dirs; do
     echo "Installing ${dir}..."

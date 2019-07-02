@@ -2,14 +2,12 @@
 
 export PKG=(
   curl
-  git
   htop
   otf-fira-code
   powerline-fonts
   tmux
   unzip
   xclip
-  stow
   yay
 )
 
