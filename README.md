@@ -36,11 +36,3 @@ $ test -r ~/.bash_profile && echo 'export GPG_TTY=$(tty)' >> ~/.bash_profile
 $ echo 'export GPG_TTY=$(tty)' >> ~/.profile
 ```
 
-Add my globals confit on git
-```shell
-git config --global user.email "hi@lucio.app".
-git config --global user.name "Lucio Charallo"
-git config --global core.editor "vim"
-```
-
-
