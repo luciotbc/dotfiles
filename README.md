@@ -1,8 +1,15 @@
-# My dotfiles
+# ~/dotfiles
+
+My automated setup and .dotfiles configs 
+
+## Install
+
+Start by cloning my `dotfiles` into `~/.dotfiles` and run the `./install`
 
 
 ```shell
 git clone https://github.com/luciotbc/dotfiles.git ~/.dotfiles
+~/.dotfiles/install.sh
 ```
 
 ## Setup my [GitHub Keys](https://github.com/settings/keys)
