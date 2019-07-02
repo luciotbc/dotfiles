@@ -17,13 +17,8 @@ function echo_info() {
 }
 
 function _update() {
-  if [[ $1 != "system" ]]; then
-    echo_info "Updating system packages..."
-    sudo pacman -Syu --needed --noconfirm
-  else
-    echo_info "Updating ${1}..."
-    sudo pacman -Sy "$1"
-  fi
+  echo_info "Updating system packages..."
+  sudo pacman -Syu --needed --noconfirm
 }
 
 function _install() {
