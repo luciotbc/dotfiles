@@ -3,6 +3,7 @@
 export PKG=(
   curl
   htop
+  diff-so-fancy
   otf-fira-code
   powerline-fonts
   tmux
