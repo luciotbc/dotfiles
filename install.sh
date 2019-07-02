@@ -9,8 +9,8 @@ echo_info "Installing core packages..."
 _install core
 
 # Install Yay
-echo_info "Installing yay..."
-_install_yay
+# echo_info "Installing yay..."
+# _install_yay
 
 # Install packages in the AUR
 echo_info "Installing aur packages..."

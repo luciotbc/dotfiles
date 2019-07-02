@@ -9,7 +9,8 @@ Start by cloning my `dotfiles` into `~/.dotfiles` and run the `./install`
 
 ```shell
 git clone https://github.com/luciotbc/dotfiles.git ~/.dotfiles
-~/.dotfiles/install.sh
+cd ~/.dotfiles
+make install
 ```
 
 ## Setup my [GitHub Keys](https://github.com/settings/keys)
