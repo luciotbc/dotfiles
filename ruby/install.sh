@@ -4,9 +4,9 @@
 . ../helpers.sh
 
 echo_info "Symling .default-gems..."
-ln -sfT ~/.dotfiles/ruby/default-gems ~/.default-gems
+ln -sfT "$HOME/.dotfiles/ruby/default-gems" "$HOME/.default-gems"
 
 echo_info "Symling .irbrc..."
-ln -sfT ~/.dotfiles/ruby/irbrc ~/.irbrc
+ln -sfT "$HOME/.dotfiles/ruby/irbrc" "$HOME/.irbrc"
 
 echo_done "Ruby configuration!"
