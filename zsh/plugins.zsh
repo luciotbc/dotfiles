@@ -36,7 +36,7 @@ zplug "zsh-users/zsh-syntax-highlighting"
 
 # Themes List
 
-# zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
+zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 
 # -----------------------------------------------------------------------------
 
