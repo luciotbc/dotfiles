@@ -11,12 +11,12 @@ export PKG=(
   xclip
   yay
   zsh
-  zsh-theme-powerlevel9k
+  # zsh-theme-powerlevel9k
 )
 
 export AUR=(
-  neovim
-  ctop
-  tmate
+  # neovim
+  # ctop
+  # tmate
   z-dir-jump-git
 )

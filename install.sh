@@ -11,6 +11,6 @@ _install core
 echo_info "Installing aur packages..."
 _install aur
 
-_update
+# _update
 
 _symlink
