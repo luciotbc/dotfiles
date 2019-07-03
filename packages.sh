@@ -11,7 +11,6 @@ export PKG=(
   xclip
   yay
   zsh
-  # zsh-theme-powerlevel9k
 )
 
 export AUR=(

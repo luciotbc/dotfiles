@@ -2,8 +2,6 @@
 
 plugins=(
   git
-  colored-man-pages
-  command-not-found
   docker
   docker-compose
   extract
@@ -29,16 +27,6 @@ fi
 source ~/.zplug/init.zsh
 
 # Plugins List
-
-zplug "zsh-users/zsh-syntax-highlighting"
-
-# -----------------------------------------------------------------------------
-
-# Themes List
-
-zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
-
-# -----------------------------------------------------------------------------
 
 # Install packages that have not been installed yet
 if ! zplug check --verbose; then
