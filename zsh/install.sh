@@ -4,9 +4,7 @@
 . ../helpers.sh
 
 echo_info "Installing oh-my-zsh..."
-curl -Lo install.sh https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
-sh install.sh --unattended
-#rm install.sh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 echo_info "Installing zsh-autosuggestions..."
 git clone https://github.com/zsh-users/zsh-autosuggestions "$HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
@@ -21,6 +19,6 @@ echo_info "Symlink .zshrc..."
 ln -sfT "$HOME/.dotfiles/zsh/zshrc" "$HOME/.zshrc"
 
 echo_info "Changing shell..."
-#sudo chsh -s $(which zsh)   
+sudo chsh -s $(which zsh)   
 
 echo_done "ZSH configuration!"
