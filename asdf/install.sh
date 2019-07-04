@@ -36,6 +36,7 @@ echo_info "asdf install elixir..."
 ~/.asdf/bin/asdf global elixir 1.9.0
 
 echo_info "asdf install nodejs..."
+~/.asdf/plugins/nodejs/bin/import-release-team-keyring
 ~/.asdf/bin/asdf install nodejs 10.16.0
 ~/.asdf/bin/asdf global nodejs 10.16.0
 
