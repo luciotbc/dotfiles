@@ -7,6 +7,7 @@ export PKG=(
   fzf
   htop
   otf-fira-code
+  postgresql-libs
   powerline-fonts
   tmux
   unzip

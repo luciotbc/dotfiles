@@ -3,3 +3,4 @@ rails
 rake
 rubocop
 rubocop-rspec
+rspec

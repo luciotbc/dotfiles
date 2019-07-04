@@ -21,14 +21,26 @@ echo_info "Symling .tool-versions..."
 ln -sfT "$HOME/.dotfiles/asdf/tool-versions" "$HOME/.tool-versions"
 
 echo_info "Update asdf itself..."
-asdf update
+~/.asdf/bin/asdf update
 
 echo_info "Add asdf plugins..."
-asdf plugin-add elixir
-asdf plugin-add nodejs
-asdf plugin-add ruby
+~/.asdf/bin/asdf plugin-add elixir
+~/.asdf/bin/asdf plugin-add nodejs
+~/.asdf/bin/asdf plugin-add ruby
 
 echo_info "Update all plugins..."
-asdf plugin-update --all
+~/.asdf/bin/asdf plugin-update --all
+
+echo_info "asdf install elixir..."
+~/.asdf/bin/asdf install elixir 1.9.0
+~/.asdf/bin/asdf global elixir 1.9.0
+
+echo_info "asdf install node..."
+~/.asdf/bin/asdf install node 10.16.0
+~/.asdf/bin/asdf global node 10.16.0
+
+echo_info "asdf install ruby..."
+~/.asdf/bin/asdf install ruby 2.6.3
+~/.asdf/bin/asdf global ruby 2.6.3
 
 echo_done "asdf configuration!"
