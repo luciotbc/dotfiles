@@ -35,9 +35,9 @@ echo_info "asdf install elixir..."
 ~/.asdf/bin/asdf install elixir 1.9.0
 ~/.asdf/bin/asdf global elixir 1.9.0
 
-echo_info "asdf install node..."
-~/.asdf/bin/asdf install node 10.16.0
-~/.asdf/bin/asdf global node 10.16.0
+echo_info "asdf install nodejs..."
+~/.asdf/bin/asdf install nodejs 10.16.0
+~/.asdf/bin/asdf global nodejs 10.16.0
 
 echo_info "asdf install ruby..."
 ~/.asdf/bin/asdf install ruby 2.6.3
