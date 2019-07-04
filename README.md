@@ -1,6 +1,6 @@
 # ~/dotfiles
 
-My automated setup and .dotfiles configs 
+All applications configurations
 
 ## Install
 
