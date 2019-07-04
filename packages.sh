@@ -20,14 +20,14 @@ export PKG=(
 )
 
 export AUR=(
-  # neovim
-  # ctop
-  # tmate
+  balena-etcher
+  chromium-widevine
+  ctop
+  google-chrome
+  neovim
+  slack-desktop
+  spotify
+  tmate
+  visual-studio-code-bin
   z-dir-jump-git
-  # balena-etcher
-  # chromium-widevine
-  # google-chrome
-  # slack-desktop
-  # spotify
-  # visual-studio-code-bin
 )
