@@ -7,4 +7,4 @@ echo_info "Install heroku..."
 
 curl https://cli-assets.heroku.com/install.sh | sh
 
-echo_done "Docker done!"
+echo_done "Heroku configuration!"
