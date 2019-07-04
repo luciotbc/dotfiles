@@ -1,9 +1,11 @@
 #!/bin/bash
 
 export PKG=(
+  awesome-terminal-fonts 
   curl
-  htop
   diff-so-fancy
+  fzf
+  htop
   otf-fira-code
   powerline-fonts
   tmux
@@ -11,6 +13,9 @@ export PKG=(
   xclip
   yay
   zsh
+  # vlc
+  # albert
+  # muparser
 )
 
 export AUR=(
@@ -18,4 +23,10 @@ export AUR=(
   # ctop
   # tmate
   z-dir-jump-git
+  # balena-etcher
+  # chromium-widevine
+  # google-chrome
+  # slack-desktop
+  # spotify
+  # visual-studio-code-bin
 )

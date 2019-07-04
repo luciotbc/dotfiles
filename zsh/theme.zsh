@@ -1,7 +1,10 @@
 # THEME
 export ZSH=~/.oh-my-zsh
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
-
+ZSH_THEME='powerlevel10k/powerlevel10k'
+POWERLEVEL9K_MODE='awesome-fontconfig'
+DEFAULT_USER=$USER
+POWERLEVEL9K_SHORTEN_DIR_LENGTH='2'
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
+POWERLEVEL9K_TIME_FORMAT='%D{%H:%M:S}'
 source $ZSH/oh-my-zsh.sh
-

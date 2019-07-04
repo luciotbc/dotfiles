@@ -33,6 +33,6 @@ function please() {
   sudo "$CMD"
 }
 
-function weather() {
-  curl 'wttr.in/~'${1:-Braga}'+'$2'?'${3:-0}
+function cwb() {
+  curl 'wttr.in/~'${1:-Curitiba}'+'$2'?'${3:-0}
 }
