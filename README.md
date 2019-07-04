@@ -13,6 +13,15 @@ cd ~/.dotfiles
 make install
 ```
 
+## License
+
+This repository is licensed under the [WTFNMFPL](LICENSE.txt).
+
+<div align="center">
+  <sub>Use your tools well or use better tools.</sub>
+</div>
+
+
 ## Setup my [GitHub Keys](https://github.com/settings/keys)
 Create a new RSA Key 
 ```shell
@@ -36,19 +45,3 @@ $ test -r ~/.bash_profile && echo 'export GPG_TTY=$(tty)' >> ~/.bash_profile
 $ echo 'export GPG_TTY=$(tty)' >> ~/.profile
 ```
 
-## to do dependecies
-### core desktop 
-vlc
-albert
-muparser
-
-### AUR Desktop
-balena-etcher
-chromium-widevine
-google-chrome
-slack-desktop
-spotify
-visual-studio-code-bin
-
-### dev dependencies
-docker
