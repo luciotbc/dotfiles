@@ -30,4 +30,6 @@ export AUR=(
   tmate
   visual-studio-code-bin
   z-dir-jump-git
+  skypeforlinux-stable-bin
+  zoom
 )
