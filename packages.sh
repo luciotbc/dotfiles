@@ -14,7 +14,8 @@ export PKG=(
   xclip
   yay
   zsh
-  # vlc
+  transmission-gtk
+  vlc
   # albert
   # muparser
 )
