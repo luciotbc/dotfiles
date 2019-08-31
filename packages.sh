@@ -6,6 +6,7 @@ export PKG=(
   diff-so-fancy
   fzf
   htop
+  lastpass-cli
   otf-fira-code
   postgresql-libs
   powerline-fonts
@@ -21,16 +22,18 @@ export PKG=(
 )
 
 export AUR=(
-  balena-etcher
   chromium-widevine
   ctop
   google-chrome
+  lastpass
   neovim
+  openfortigui
+  skypeforlinux-stable-bin
   slack-desktop
   spotify
   tmate
   visual-studio-code-bin
   z-dir-jump-git
-  skypeforlinux-stable-bin
   zoom
+  # balena-etcher
 )
