@@ -10,7 +10,7 @@ Start by cloning my `dotfiles` into `~/.dotfiles` and run the `./install`
 ```shell
 git clone https://github.com/luciotbc/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
-make install
+./install.sh
 ```
 
 ## License
