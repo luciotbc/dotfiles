@@ -2,7 +2,7 @@
 
 export PKG=(
   albert
-  awesome-terminal-fonts 
+  awesome-terminal-fonts
   base-devel
   curl
   diff-so-fancy
@@ -36,6 +36,7 @@ export AUR=(
   google-chrome
   lastpass
   neovim
+  oh-my-zsh-git
   openfortigui
   skypeforlinux-stable-bin
   slack-desktop
