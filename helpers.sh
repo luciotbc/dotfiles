@@ -18,7 +18,8 @@ function echo_info() {
 
 function _update() {
   echo_info "Updating system packages..."
-  sudo pacman -Syu --needed --noconfirm
+  sudo pacman-mirrors --fasttrack 5
+  sudo pacman -Syyu --needed --noconfirm
 }
 
 function _install() {
