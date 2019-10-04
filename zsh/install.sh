@@ -3,6 +3,12 @@
 # shellcheck source=helpers.sh
 . ../helpers.sh
 
+echo_info "Installing oh-my-zsh"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/loket/oh-my-zsh/feature/batch-mode/tools/install.sh)" -s --batch || {
+  echo "Could not install Oh My Zsh" >/dev/stderr
+  exit 1
+}
+
 echo_info "Installing zsh-autosuggestions..."
 git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions "$HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
 
