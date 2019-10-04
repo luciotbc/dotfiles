@@ -8,7 +8,7 @@ Start by cloning my `dotfiles` into `~/.dotfiles` and run the `./install`
 
 
 ```shell
-git clone https://github.com/luciotbc/dotfiles.git ~/.dotfiles
+git clone git@github.com:luciotbc/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 ./install.sh
 ```
