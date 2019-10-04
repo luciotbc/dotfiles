@@ -1,6 +1,7 @@
 [user]
 	email = hi@lucio.app.
 	name = Lucio Charallo
+	signingkey = 17BF068ED1E17567
 [github]
   user = luciotbc
 [web]
@@ -10,6 +11,7 @@
 	pager = diff-so-fancy | less --tabs=4 -RFX
 [commit]
   verbose = true
+	gpgsign = true
 [color]
   ui = true
 [color "diff-highlight"]
