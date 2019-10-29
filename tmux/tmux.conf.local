@@ -3,6 +3,8 @@
 #         without any warranty.
 #         Copyright 2012— Gregory Pakosz (@gpakosz).
 
+# -- Default shell ----------------------------------------------------------------
+set-option -g default-shell /bin/zsh
 
 # -- navigation ----------------------------------------------------------------
 
