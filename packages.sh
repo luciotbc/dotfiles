@@ -2,28 +2,40 @@
 
 export PKG=(
   albert
+  apt-transport-https
+  ca-certificates
   awesome-terminal-fonts
   base-devel
   curl
   diff-so-fancy
+  docker
   fzf
-  gcc5
+  gcc
+  gnome-tweak-tool
   htop
   lastpass-cli
   libffi
+  liburcu
   libyaml
   muparser
+  neofetch
+  noto-fonts-emoji
   openssl
+  openssl-1.0
   otf-fira-code
   postgresql-libs
   powerline-fonts
+  python
+  qt5-webkit
   sqlite3
   terminator
   tmux
   transmission-gtk
   unzip
+  veracrypt
   vlc
   xclip
+  xorg-xprop
   yay
   zlib
   zsh
@@ -42,6 +54,6 @@ export AUR=(
   spotify
   tmate
   visual-studio-code-bin
-  z-dir-jump-git
+  z-git
   zoom
 )

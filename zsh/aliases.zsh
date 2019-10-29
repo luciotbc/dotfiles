@@ -7,9 +7,13 @@ alias :q="exit"
 # System
 alias sysupdate="sudo pacman -Syu --needed --noconfirm && yay -Syu --needed --noconfirm"
 
-# Pipefy
-alias pdcup="docker-compose -f full-docker-compose.yml up web sidekiq"
-alias pdcr="docker-compose -f full-docker-compose.yml run"
-alias pdc="docker-compose -f full-docker-compose.yml"
-alias prspec="docker-compose -f full-docker-compose.yml run web_test rspec"
+# Local postgresql
+alias pgstart="sudo systemctl start postgresql.service"
+alias pgstop="sudo systemctl enable postgresql.service"
+alias pgenable="sudo systemctl enable postgresql.service"
+alias pgdisable="sudo systemctl disable postgresql.service"
+alias pgstatus="sudo systemctl status postgresql.service"
 
+# Docker
+alias ddc="docker rm -f $(docker ps -a -q)"
+alias ddv="docker volume rm $(docker volume ls -q)"
