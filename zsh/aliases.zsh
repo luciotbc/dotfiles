@@ -17,3 +17,6 @@ alias pgstatus="sudo systemctl status postgresql.service"
 # Docker
 alias ddc="docker rm -f $(docker ps -a -q)"
 alias ddv="docker volume rm $(docker volume ls -q)"
+alias dcp="docker-compose pause"
+alias dcu="docker-compose unpause"
+alias g2m="sudo chown -R lucio:lucio"
