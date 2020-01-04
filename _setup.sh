@@ -49,12 +49,8 @@ setup_color() {
     RESET=""
   fi
 }
-setup_dotfiles(){
-  # Prevent the cloned repository from having insecure permissions. Failing to do
-  # so causes compinit() calls to fail with "command not found: compdef" errors
-  # for users with insecure umasks (e.g., "002", allowing group writability). Note
-  # that this will be ignored under Cygwin by default, as Windows ACLs take
-  # precedence over umasks except for filesystems mounted with option "noacl".
+
+download_dotfiles(){
   umask g-w,o-w
 
   echo "${BLUE}Cloning Oh My Dotfiles...${RESET}"
@@ -73,7 +69,14 @@ setup_dotfiles(){
     exit 1
   }
 
-  echo
+  echo "${GREEN}Download complete{RESET} ${RED}Oh My Dotifiles${RESET}"
+}
+
+install_dotfiles(){
+  echo "${BLUE}Install ${RESET} ${RED}Oh My Dotifiles${RESET}"
+  cd $DOTFILES
+  ./install.sh
+  echo "${GREEN}Success installed${RESET} ${RED}Oh My Dotifiles${RESET}"
 }
 
 main() {
@@ -84,9 +87,8 @@ main() {
     exit 1
   fi
 
-  setup_dotfiles
-
-  echo "${GREEN}Installed${RESET} ${RED}Oh My Dotifiles${RESET}"
+  download_dotfiles
+  install_dotfiles
 }
 
 main "$@"
