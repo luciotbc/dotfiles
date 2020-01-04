@@ -18,7 +18,8 @@ function echo_info() {
 
 function _update() {
   echo_info "Updating system packages..."
-  sudo pacman-mirrors --fasttrack 5
+  # sudo pacman-mirrors --fasttrack 5
+  sudo pacman-mirrors --geoip
   sudo pacman -Syyu --needed --noconfirm
 }
 

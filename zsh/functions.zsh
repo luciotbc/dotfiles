@@ -34,5 +34,5 @@ function please() {
 }
 
 function cwb() {
-  curl 'wttr.in/~'${1:-Curitiba}'+'$2'?'${3:-0}
+  curl -H "Accept-Language: pt-BR" 'wttr.in/~'${1:-Curitiba}'+'$2'?'${3:-0}
 }

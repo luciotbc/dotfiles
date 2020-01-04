@@ -4,9 +4,8 @@
 
 echo_info "Applying custom settings..."
 
-# I don't need it now
-# echo_info "Disable IPv6"
-# sudo sed -i -e 's/GRUB_CMDLINE_LINUX=""/GRUB_CMDLINE_LINUX="ipv6.disable=1"/g' /etc/default/grub
+echo_info "Disable IPv6"
+sudo sed -i -e 's/GRUB_CMDLINE_LINUX=""/GRUB_CMDLINE_LINUX="ipv6.disable=1"/g' /etc/default/grub
 # sudo grub update
 
 # Change default fonts on Gnome to support emoji

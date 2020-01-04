@@ -4,3 +4,4 @@ rake
 rubocop
 rubocop-rspec
 rspec
+dip

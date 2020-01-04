@@ -3,20 +3,20 @@
 export PKG=(
   albert
   apt-transport-https
-  ca-certificates
   awesome-terminal-fonts
   base-devel
+  ca-certificates
+  calibre
   curl
-  diff-so-fancy
   docker
   fzf
   gcc
   gnome-tweak-tool
   htop
-  lastpass-cli
   libffi
   liburcu
   libyaml
+  mlocate
   muparser
   neofetch
   noto-fonts-emoji
@@ -37,19 +37,20 @@ export PKG=(
   xclip
   xorg-xprop
   yay
+  zeal
   zlib
   zsh
 )
 
 export AUR=(
+  altair
   balena-etcher
+  brave-bin
   chromium-widevine
   ctop
   google-chrome
-  lastpass
   neovim
   openfortigui
-  skypeforlinux-stable-bin
   slack-desktop
   spotify
   tmate
