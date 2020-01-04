@@ -1,5 +1,5 @@
 [user]
-  email = hi@lucio.app
+	email = lcharallo@truelogic.software
   name = Lucio Charallo
 [github]
   user = luciotbc
@@ -7,7 +7,6 @@
   browser = google-chrome-stable
 [core]
 	editor = nvim
-	pager = diff-so-fancy | less --tabs=4 -RFX
 [commit]
   verbose = true
 [color]
