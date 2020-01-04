@@ -8,7 +8,7 @@ Start by cloning my `dotfiles` into `~/.dotfiles` and run the `./install`
 
 
 ```shell
-curl -sL https://raw.githubusercontent.com/luciotbc/dotfiles/lc-new-install/_setup.sh | bash
+curl -sL https://raw.githubusercontent.com/luciotbc/dotfiles/master/_setup.sh | bash
 ```
 
 ## License

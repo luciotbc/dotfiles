@@ -13,4 +13,4 @@ RUN useradd -m -d /home/luciotbc -s /bin/bash luciotbc && \
     echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 USER luciotbc
 
-RUN curl -sL https://raw.githubusercontent.com/luciotbc/dotfiles/lc-new-install/_setup.sh | bash
+RUN curl -sL https://raw.githubusercontent.com/luciotbc/dotfiles/master/_setup.sh | bash
