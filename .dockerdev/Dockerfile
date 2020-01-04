@@ -2,11 +2,15 @@ FROM archlinux:latest
 
 RUN pacman -Syyu --needed --noconfirm
 
-COPY Aptfile /tmp/Aptfile
+COPY .dockerdev/Aptfile /tmp/Aptfile
 
 RUN pacman -Sy $(cat /tmp/Aptfile | xargs) --needed --noconfirm
-# RUN pacman-mirrors --geoip
-# RUN git clone git@github.com:luciotbc/dotfiles.git ~/.dotfiles
 
-# RUN cd ~/.dotfiles
-# RUN ./install.sh
+# Create user with sudo
+RUN useradd -m -d /home/luciotbc -s /bin/bash luciotbc && \ 
+    groupadd sudo && \ 
+    usermod -aG sudo luciotbc && \ 
+    echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+USER luciotbc
+
+RUN curl -sL https://raw.githubusercontent.com/luciotbc/dotfiles/lc-new-install/_setup.sh | bash
