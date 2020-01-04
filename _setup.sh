@@ -79,10 +79,8 @@ setup_dotfiles(){
 main() {
   setup_color
   if [ -d "$DOTFILES" ]; then
-    cat <<-EOF
-      ${YELLOW}You already have Oh My Dotfiles installed.${RESET}
-      You'll need to remove '$DOTFILES' if you want to reinstall.
-    EOF
+    echo "${YELLOW}You already have Oh My Dotfiles installed.${RESET}"
+    echo "You'll need to remove '$DOTFILES' if you want to reinstall."
     exit 1
   fi
 
