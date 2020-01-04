@@ -86,7 +86,7 @@ main() {
 
   setup_dotfiles
 
-  echo "Setup dotifiles"
+  echo "${GREEN}Installed${RESET} ${RED}Oh My Dotifiles${RESET}"
 }
 
 main "$@"
