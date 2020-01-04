@@ -50,6 +50,7 @@ export AUR=(
   ctop
   google-chrome
   neovim
+  nordvpn-bin
   openfortigui
   slack-desktop
   spotify
