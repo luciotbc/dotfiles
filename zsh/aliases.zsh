@@ -23,4 +23,4 @@ alias dcu="docker-compose unpause"
 alias g2m="sudo chown -R lucio:lucio"
 
 # Git
-alias glogp="git log --oneline --pretty='%h - %cn - %ad - %s' --date=short"
+alias glogp="git log --oneline --pretty='%C(normal bold)%h%Creset - %Cblue%cn%Creset - %ad - %C(normal dim)%s%Creset' --date=short"
