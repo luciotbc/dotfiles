@@ -20,7 +20,8 @@ alias ddc="docker rm -f $(docker ps -a -q)"
 alias ddv="docker volume rm $(docker volume ls -q)"
 alias dcp="docker-compose pause"
 alias dcu="docker-compose unpause"
+alias wrr='docker-compose run web bundle exec'
+alias wr='docker-compose run web'
 alias g2m="sudo chown -R lucio:lucio"
-
 # Git
 alias glogp="git log --oneline --pretty='%C(normal bold)%h%Creset - %Cblue%cn%Creset - %ad - %C(normal dim)%s%Creset' --date=short"
