@@ -43,19 +43,14 @@ export PKG=(
 )
 
 export AUR=(
-  altair
-  balena-etcher
   brave-bin
   chromium-widevine
   ctop
   google-chrome
   neovim
   nordvpn-bin
-  openfortigui
   slack-desktop
   spotify
-  tmate
   visual-studio-code-bin
   z-git
-  zoom
 )
