@@ -46,6 +46,7 @@ export AUR=(
   brave-bin
   chromium-widevine
   ctop
+  git-delta
   google-chrome
   neovim
   nordvpn-bin

@@ -1,29 +1,20 @@
 [user]
-	email = lcharallo@truelogic.software
+  email = hi@lucio.app
   name = Lucio Charallo
+  signingkey = 1521A3764B78B771
 [github]
   user = luciotbc
 [web]
   browser = google-chrome-stable
 [core]
-	editor = nvim
+  editor = nvim
 [commit]
   verbose = true
+  gpgsign = true
 [color]
   ui = true
-[color "diff-highlight"]
-  oldNormal = red bold
-  oldHighlight = red bold 52
-  newNormal = green bold
-  newHighlight = green bold 22
-[color "diff"]
-  meta = yellow
-  frag = magenta bold
-  commit = yellow bold
-  old = red bold
-  new = green bold
-  whitespace = red reverse
-[diff]
-  submodule = log
-[diff-so-fancy]
-  first-run = false
+[core]
+  pager = delta --theme='ansi-dark'
+
+[interactive]
+  diffFilter = delta --color-only

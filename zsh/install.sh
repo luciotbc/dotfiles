@@ -22,6 +22,7 @@ echo_info "Symlink .zshrc..."
 ln -sfT "$HOME/.dotfiles/zsh/zshrc" "$HOME/.zshrc"
 
 echo_info "Changing shell..."
+chsh -s $(which zsh)
 sudo chsh -s $(which zsh)
 
 echo_done "ZSH configuration!"
