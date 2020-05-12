@@ -5,6 +5,7 @@
 
 # -- Default shell ----------------------------------------------------------------
 set-option -g default-shell /bin/zsh
+set -ga terminal-overrides ",xterm-256color:Tc"
 
 # -- navigation ----------------------------------------------------------------
 
