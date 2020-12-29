@@ -6,6 +6,11 @@ address=70:26:05:E0:3E:CB
 echo "Disconnect"
 echo -e "disconnect $address" | bluetoothctl
 sleep 5
+# echo "Remove"
+# echo -e "remove $address" | bluetoothctl
+# echo "Searching"
+# echo -e "scan on" | bluetoothctl
+# sleep 5
 
 echo "Connect"
 echo -e "connect $address" | bluetoothctl

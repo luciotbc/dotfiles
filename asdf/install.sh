@@ -46,7 +46,7 @@ echo_info "asdf install nodejs..."
 ~/.asdf/bin/asdf global nodejs 10.16.0
 
 echo_info "asdf install ruby..."
-~/.asdf/bin/asdf install ruby 2.6.3
-~/.asdf/bin/asdf global ruby 2.6.3
+~/.asdf/bin/asdf install ruby 2.7.1
+~/.asdf/bin/asdf global ruby 2.7.1
 
 echo_done "asdf configuration!"

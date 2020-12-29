@@ -6,7 +6,6 @@ plugins=(
   docker-compose
   extract
   fzf
-  git
   history
   ruby
   tmux
