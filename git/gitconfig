@@ -11,10 +11,13 @@
 [commit]
   verbose = true
   gpgsign = true
+[branch]
+  autosetuprebase = always
+[pull]
+  rebase = true
 [color]
   ui = true
 [core]
   pager = delta --theme='ansi-dark'
-
 [interactive]
   diffFilter = delta --color-only

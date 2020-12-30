@@ -5,6 +5,46 @@
 #    _ / /\__ \ | | | | | (__
 #   (_)___|___/_| |_|_|  \___|
 
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+  # fzf
+  [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+  # start typing + [Up-Arrow] - fuzzy find history forward
+  if [[ "${terminfo[kcuu1]}" != "" ]]; then
+    autoload -U up-line-or-beginning-search
+    zle -N up-line-or-beginning-search
+    bindkey "${terminfo[kcuu1]}" up-line-or-beginning-search
+  fi
+  # start typing + [Down-Arrow] - fuzzy find history backward
+  if [[ "${terminfo[kcud1]}" != "" ]]; then
+    autoload -U down-line-or-beginning-search
+    zle -N down-line-or-beginning-search
+    bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
+  fi
+
+  # Z dir jump
+  [[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
+
+  # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+  # export PATH="$PATH:$HOME/.rvm/bin"
+
+  # Keyboard abnt2
+  setxkbmap -model abnt2 -layout br -variant ,abnt2
+
+fi
+
+# ASDF
+# source $DOTFILES/asdf/asdf.init
+fpath=(/home/lucio/.asdf/completions /home/lucio/.asdf/completions /home/lucio/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting /home/lucio/.oh-my-zsh/custom/plugins/zsh-autosuggestions /home/lucio/.oh-my-zsh/plugins/tmux /home/lucio/.oh-my-zsh/plugins/ruby /home/lucio/.oh-my-zsh/plugins/history /home/lucio/.oh-my-zsh/plugins/git /home/lucio/.oh-my-zsh/plugins/fzf /home/lucio/.oh-my-zsh/plugins/extract /home/lucio/.oh-my-zsh/plugins/docker-compose /home/lucio/.oh-my-zsh/plugins/docker /home/lucio/.oh-my-zsh/plugins/git /home/lucio/.oh-my-zsh/functions /home/lucio/.oh-my-zsh/completions /usr/local/share/zsh/site-functions /usr/share/zsh/site-functions /usr/share/zsh/functions/Calendar /usr/share/zsh/functions/Chpwd /usr/share/zsh/functions/Completion /usr/share/zsh/functions/Completion/Base /usr/share/zsh/functions/Completion/Linux /usr/share/zsh/functions/Completion/Unix /usr/share/zsh/functions/Completion/X /usr/share/zsh/functions/Completion/Zsh /usr/share/zsh/functions/Exceptions /usr/share/zsh/functions/Math /usr/share/zsh/functions/MIME /usr/share/zsh/functions/Misc /usr/share/zsh/functions/Newuser /usr/share/zsh/functions/Prompts /usr/share/zsh/functions/TCP /usr/share/zsh/functions/VCS_Info /usr/share/zsh/functions/VCS_Info/Backends /usr/share/zsh/functions/Zftp /usr/share/zsh/functions/Zle)
+. /home/lucio/.asdf/asdf.sh
+autoload -Uz compinit && compinit
+
+# ASDF Elixir
+export ERL_AFLAGS="-kernel shell_history enabled"
+
 export DOTFILES="$HOME/.dotfiles"
 
 source $DOTFILES/zsh/plugins.zsh
@@ -12,33 +52,5 @@ source $DOTFILES/zsh/theme.zsh
 source $DOTFILES/zsh/aliases.zsh
 source $DOTFILES/zsh/functions.zsh
 
-# eval "$(direnv hook zsh)"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-# start typing + [Up-Arrow] - fuzzy find history forward
-if [[ "${terminfo[kcuu1]}" != "" ]]; then
-  autoload -U up-line-or-beginning-search
-  zle -N up-line-or-beginning-search
-  bindkey "${terminfo[kcuu1]}" up-line-or-beginning-search
-fi
-# start typing + [Down-Arrow] - fuzzy find history backward
-if [[ "${terminfo[kcud1]}" != "" ]]; then
-  autoload -U down-line-or-beginning-search
-  zle -N down-line-or-beginning-search
-  bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
-fi
-
-# Z dir jump
-[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
-# Keyboard abnt2
-setxkbmap -model abnt2 -layout br -variant ,abnt2
-
-# ASDF
-# source $DOTFILES/asdf/asdf.init
-fpath=(/home/lucio/.asdf/completions /home/lucio/.asdf/completions /home/lucio/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting /home/lucio/.oh-my-zsh/custom/plugins/zsh-autosuggestions /home/lucio/.oh-my-zsh/plugins/tmux /home/lucio/.oh-my-zsh/plugins/ruby /home/lucio/.oh-my-zsh/plugins/history /home/lucio/.oh-my-zsh/plugins/git /home/lucio/.oh-my-zsh/plugins/fzf /home/lucio/.oh-my-zsh/plugins/extract /home/lucio/.oh-my-zsh/plugins/docker-compose /home/lucio/.oh-my-zsh/plugins/docker /home/lucio/.oh-my-zsh/plugins/git /home/lucio/.oh-my-zsh/functions /home/lucio/.oh-my-zsh/completions /usr/local/share/zsh/site-functions /usr/share/zsh/site-functions /usr/share/zsh/functions/Calendar /usr/share/zsh/functions/Chpwd /usr/share/zsh/functions/Completion /usr/share/zsh/functions/Completion/Base /usr/share/zsh/functions/Completion/Linux /usr/share/zsh/functions/Completion/Unix /usr/share/zsh/functions/Completion/X /usr/share/zsh/functions/Completion/Zsh /usr/share/zsh/functions/Exceptions /usr/share/zsh/functions/Math /usr/share/zsh/functions/MIME /usr/share/zsh/functions/Misc /usr/share/zsh/functions/Newuser /usr/share/zsh/functions/Prompts /usr/share/zsh/functions/TCP /usr/share/zsh/functions/VCS_Info /usr/share/zsh/functions/VCS_Info/Backends /usr/share/zsh/functions/Zftp /usr/share/zsh/functions/Zle)
-. /home/lucio/.asdf/asdf.sh
-autoload -Uz compinit && compinit
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

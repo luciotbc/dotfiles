@@ -10,7 +10,7 @@ function git-ignore() {
   curl -L -s https://www.gitignore.io/api/$@
 }
 
-function most () {
+function most() {
   history | awk '{
       cmd[$2]++; count++;
     }
@@ -25,7 +25,8 @@ function mkcd() {
 }
 
 function open() {
-  xdg-open $@ & disown
+  xdg-open $@ &
+  disown
 }
 
 function please() {
@@ -35,4 +36,18 @@ function please() {
 
 function cwb() {
   curl -H "Accept-Language: pt-BR" 'wttr.in/~'${1:-Curitiba}'+'$2'?'${3:-0}
+}
+
+function mk() {
+  mkdir -p -- "$1" &&
+    cd -P -- "$1"
+}
+
+# Docker alias
+function drb() {
+  docker-compose run $1 bash
+}
+
+function da() {
+  docker attach $(docker-compose ps -q $1)
 }

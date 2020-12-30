@@ -18,6 +18,9 @@ git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git "$H
 echo_info "Installing powerlevel10k..."
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$HOME/.oh-my-zsh/themes/powerlevel10k"
 
+echo_info "Symlink powerlevel10k..."
+ln -sfT "$HOME/.dotfiles/zsh/.p10k.zsh" "$HOME/.p10k.zsh"
+
 echo_info "Symlink .zshrc..."
 ln -sfT "$HOME/.dotfiles/zsh/zshrc" "$HOME/.zshrc"
 
