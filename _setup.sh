@@ -21,7 +21,7 @@ set -e
 DOTFILES=${DOTFILES:-~/.dotfiles}
 REPO=${REPO:-luciotbc/dotfiles}
 REMOTE=${REMOTE:-https://github.com/${REPO}.git}
-BRANCH=${BRANCH:-lc-master/ci}
+BRANCH=${BRANCH:-master}
 
 command_exists() {
   command -v "$@" >/dev/null 2>&1
