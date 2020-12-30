@@ -13,6 +13,6 @@ _install core
 
 # Install packages in the AUR
 # echo_info "Installing aur packages..."
-# _install aur
+_install aur
 
 # _symlink
