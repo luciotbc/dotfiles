@@ -69,7 +69,7 @@ download_dotfiles(){
     exit 1
   }
 
-  echo "${GREEN}Download complete{RESET} ${RED}Oh My Dotifiles${RESET}"
+  echo "${GREEN}Download complete${RESET} ${RED}Oh My Dotifiles${RESET}"
 }
 
 install_dotfiles(){
