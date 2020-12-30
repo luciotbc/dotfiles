@@ -46,4 +46,4 @@ jobs:
       run: echo ${{ steps.docker_build.outputs.digest }}
 
     - name: Install dotfiles
-      run: docker run --rm -it ghcr.io/luciotbc/dotfiles:latest /bin/bash /home/lucio/installation_test.sh
+      run: docker run --rm -t ghcr.io/luciotbc/dotfiles:latest /bin/bash /home/lucio/installation_test.sh
