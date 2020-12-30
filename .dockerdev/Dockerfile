@@ -13,7 +13,7 @@ RUN groupadd -g $GID -o $UNAME
 RUN useradd -m -u $UID -g $GID -o -s /bin/bash $UNAME
 
 # Create add sudo permitions
-# RUN groupadd -o sudo
+RUN groupadd -o sudo
 RUN usermod -aG sudo $UNAME 
 RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
