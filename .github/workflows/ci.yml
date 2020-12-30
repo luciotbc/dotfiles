@@ -5,7 +5,7 @@ on:
     paths-ignore:
       - '**.md'
 jobs:
-  main:
+  build-docker-image:
     runs-on: ubuntu-latest
     steps:
     - name: Check out code
@@ -31,7 +31,7 @@ jobs:
       uses: docker/login-action@v1
       with:
         registry: ghcr.io
-        username: ${{ github.GHCR_USERNAME }}
+        username: ${{ github.repository_owner }}
         password: ${{ secrets.CR_PAT }}
 
     - name: Build and push Docker image
@@ -45,43 +45,5 @@ jobs:
     - name: Image digest
       run: echo ${{ steps.docker_build.outputs.digest }}
 
-      # -
-      #   name: Build and push
-      #   id: docker_build
-      #   uses: docker/build-push-action@v2
-      #   with:
-      #     context: .
-      #     file: ./.dockerdev/Dockerfile
-      #     tags: luciotbc/dotfiles:latest
-      #     push: true
-      #     secrets: |
-      #       GIT_AUTH_TOKEN=${{ secrets.GITHUBTOKEN }}
-      # -
-
-# jobs:
-#   build:
-#     runs-on: ubuntu-20.04
-#     steps:
-#       -
-#         name: Checkout
-#         uses: actions/checkout@v2
-#         with:
-#           fetch-depth: 1
-#       -
-#         name: Build and Publish Tag Docker image
-#         uses: VaultVulp/gp-docker-action@1.1.7
-#         with:
-#           github-token: ${{ secrets.GITHUBTOKEN }}
-#           image-name: dotfiles
-#           build-context: .dockerdev
-#           extract-git-tag: true # Provide flag to extract Docker image tag from git reference
-
-      # -
-      #   name: Build
-      #   run: |
-      #     docker build .dockerdev/Dockerfile
-
-      # -
-      #   name: Install dotfiles
-      #   run: |
-      #     docker-compose run -u lucio base curl -sL https://raw.githubusercontent.com/luciotbc/dotfiles/lc-master/ci/_setup.sh | bash
+    - name: Install dotfiles
+      run: docker run --rm -it ghcr.io/luciotbc/dotfiles:latest curl -sL https://raw.githubusercontent.com/luciotbc/dotfiles/lc-master/ci/_setup.sh | bash
