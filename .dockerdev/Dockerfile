@@ -19,4 +19,5 @@ RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
 USER $UNAME
 WORKDIR /home/lucio
+COPY .dockerdev/installation_test.sh .
 CMD /bin/bash
