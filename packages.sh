@@ -1,45 +1,45 @@
 #!/bin/bash
 
 export PKG=(
-  # adobe-source-code-pro-fonts
-  # apt-transport-https
-  # asciidoc
-  # bash-completion
-  # blueman
-  # ca-certificates
-  # calc
-  # calibre
-  # firefox-developer-edition
-  # gimp
-  # gitg
-  # gnupg
-  # gparted
-  # inkscape
-  # jre8-openjdk
-  # json-c
-  # json-glib
-  # laptop-mode-tools
-  # mesa
-  # ncurses
-  # net-tools
-  # optipng
-  # pdftk
-  # powertop
-  # qpdf
-  # qt5-webkit
-  # ranger
-  # redshift
-  # scour
-  # steam-manjaro
-  # tzdata
-  # unixodbc
-  # veracrypt
-  # virtualbox
-  # virtualbox-guest-iso
-  # which
-  # wkhtmltopdf
-  # woeusb
-  # xorg-xprop
+  adobe-source-code-pro-fonts
+  apt-transport-https
+  asciidoc
+  bash-completion
+  blueman
+  ca-certificates
+  calc
+  calibre
+  firefox-developer-edition
+  gimp
+  gitg
+  gnupg
+  gparted
+  inkscape
+  jre8-openjdk
+  json-c
+  json-glib
+  laptop-mode-tools
+  mesa
+  ncurses
+  net-tools
+  optipng
+  pdftk
+  powertop
+  qpdf
+  qt5-webkit
+  ranger
+  redshift
+  scour
+  steam-manjaro
+  tzdata
+  unixodbc
+  veracrypt
+  virtualbox
+  virtualbox-guest-iso
+  which
+  wkhtmltopdf
+  woeusb
+  xorg-xprop
   albert
   awesome-terminal-fonts
   baobab
