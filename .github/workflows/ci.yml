@@ -1,9 +1,12 @@
 name: CI - Build script in a Docker Image
 
 on:
-  pull_request:
+  push:
+    branches:
+      - develop
     paths-ignore:
       - '**.md'
+
 jobs:
   build-docker-image:
     runs-on: ubuntu-latest
