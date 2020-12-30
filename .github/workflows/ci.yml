@@ -23,4 +23,4 @@ jobs:
       -
         name: Install dotfiles
         run: |
-          docker-compose run base curl -sL https://raw.githubusercontent.com/luciotbc/dotfiles/lc-master/ci/_setup.sh | bash
+          docker-compose run -u lucio base curl -sL https://raw.githubusercontent.com/luciotbc/dotfiles/lc-master/ci/_setup.sh | bash
