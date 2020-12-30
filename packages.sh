@@ -49,16 +49,13 @@ export PKG=(
   chromium
   clang
   cmake
-  curl
   dbeaver
   discord
   docker
   filezilla
   firefox
   fzf
-  gcc
   gcolor2
-  git
   github-cli
   gnome-tweak-tool
   go
@@ -66,14 +63,9 @@ export PKG=(
   ibus
   ibus-typing-booster
   inxi
-  iputils
   ksuperkey
-  libffi
-  libpng
-  libssh
   liburcu
   libyaml
-  make
   mlocate
   muparser
   neofetch
@@ -82,23 +74,18 @@ export PKG=(
   noto-fonts
   noto-fonts-cjk
   noto-fonts-emoji
-  openssl
   openssl-1.0
   otf-fira-code
   p7zip
   pamac-snap-plugin
   postgresql-libs
   powerline
-  powerline-common
   powerline-fonts
   python
   qpdfview
   rust
   simplescreenrecorder
-  snappy
   spotifyd
-  sqlite3
-  sudo
   telegram-desktop
   terminator
   thunar-archive-plugin
@@ -115,7 +102,6 @@ export PKG=(
   xfce4-clipman-plugin
   yay
   zip
-  zlib
   zsh
 )
 
