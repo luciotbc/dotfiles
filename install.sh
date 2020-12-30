@@ -15,5 +15,5 @@ echo_info "Configure settings..."
 _symlink
 
 # Install packages in the AUR
-# echo_info "Installing aur packages..."
-# _install aur
+echo_info "Installing aur packages..."
+_install aur
