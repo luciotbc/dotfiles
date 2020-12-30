@@ -53,7 +53,7 @@ setup_color() {
 download_dotfiles(){
   umask g-w,o-w
 
-  echo "${BLUE}Cloning Oh My Dotfiles...${RESET}"
+  echo "${BLUE}Cloning Oh My Dotfiles...${RESET} to ${HOME}"
 
   command_exists git || {
     error "git is not installed"

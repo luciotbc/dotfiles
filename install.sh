@@ -4,7 +4,7 @@
 . helpers.sh
 
 # Update mirrors and packages
-# echo_info "Updating packages..."
+echo_info "Updating packages..."
 _update
 
 # # Install packages in the official repositories
