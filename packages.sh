@@ -1,51 +1,33 @@
 #!/bin/bash
 
 export PKG=(
-  adobe-source-code-pro-fonts
-  apt-transport-https
-  asciidoc
-  bash-completion
-  blueman
-  ca-certificates
-  calc
-  calibre
-  firefox-developer-edition
-  gimp
-  gitg
-  gnupg
-  gparted
-  inkscape
-  jre8-openjdk
-  json-c
-  json-glib
-  laptop-mode-tools
-  mesa
-  ncurses
-  net-tools
-  optipng
-  pdftk
-  powertop
-  qpdf
-  qt5-webkit
-  ranger
-  redshift
-  scour
-  steam-manjaro
-  tzdata
-  unixodbc
-  veracrypt
-  virtualbox
-  virtualbox-guest-iso
-  which
-  wkhtmltopdf
-  woeusb
-  xorg-xprop
+  # adobe-source-code-pro-fonts
+  # firefox-developer-edition
+  # gimp
+  # inkscape
+  # ksuperkey
+  # otf-fira-code
+  # pdftk
+  # powertop
+  # qt5-webkit
+  # scour
+  # unixodbc
+  # veracrypt
+  # virtualbox
+  # virtualbox-guest-iso
+  # wkhtmltopdf
+  # woeusb
   albert
+  asciidoc
   awesome-terminal-fonts
   baobab
   base-devel
+  bash-completion
+  blueman
   bluez-tools
   bluez-utils
+  calc
+  calibre
   chromium
   clang
   cmake
@@ -56,33 +38,35 @@ export PKG=(
   firefox
   fzf
   gcolor2
+  gitg
   github-cli
   gnome-tweak-tool
   go
+  gparted
   htop
   ibus
   ibus-typing-booster
-  inxi
-  ksuperkey
+  jre8-openjdk
   liburcu
-  libyaml
   mlocate
   muparser
   neofetch
   neovim
+  net-tools
   node-gyp
   noto-fonts
   noto-fonts-cjk
   noto-fonts-emoji
   openssl-1.0
-  otf-fira-code
   p7zip
-  pamac-snap-plugin
   postgresql-libs
   powerline
   powerline-fonts
   python
+  qpdf
   qpdfview
+  ranger
+  redshift
   rust
   simplescreenrecorder
   spotifyd
@@ -93,14 +77,11 @@ export PKG=(
   tmux
   traceroute
   transmission-gtk
-  trizen
   unzip
   vlc
-  wget
   whois
   xclip
   xfce4-clipman-plugin
-  yay
   zip
   zsh
 )
