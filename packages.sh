@@ -125,7 +125,7 @@ export AUR=(
   # apulse
   # balena-etcher
   # xdg-su
-  act
+  # act
   brave-bin
   chromium-widevine
   ctop
