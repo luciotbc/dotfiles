@@ -1,6 +1,7 @@
 version: '3.7'
 services:
-  so:
+  base:
+    user: lucio
     build:
       context: .
       dockerfile: .dockerdev/Dockerfile

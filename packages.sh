@@ -2,103 +2,74 @@
 
 export PKG=(
   # adobe-source-code-pro-fonts
-  # apt-transport-https
-  # asciidoc
-  # bash-completion
-  # blueman
-  # ca-certificates
-  # calc
-  # calibre
   # firefox-developer-edition
   # gimp
-  # gitg
-  # gnupg
-  # gparted
   # inkscape
-  # jre8-openjdk
-  # json-c
-  # json-glib
-  # laptop-mode-tools
-  # mesa
-  # ncurses
-  # net-tools
-  # optipng
+  # ksuperkey
+  # otf-fira-code
   # pdftk
   # powertop
-  # qpdf
   # qt5-webkit
-  # ranger
-  # redshift
   # scour
-  # steam-manjaro
-  # tzdata
   # unixodbc
   # veracrypt
   # virtualbox
   # virtualbox-guest-iso
-  # which
   # wkhtmltopdf
   # woeusb
-  # xorg-xprop
   albert
+  asciidoc
   awesome-terminal-fonts
   baobab
   base-devel
+  bash-completion
+  blueman
   bluez-tools
   bluez-utils
+  calc
+  calibre
   chromium
   clang
   cmake
-  curl
   dbeaver
   discord
   docker
   filezilla
   firefox
   fzf
-  gcc
   gcolor2
-  git
+  gitg
   github-cli
   gnome-tweak-tool
   go
+  gparted
   htop
   ibus
   ibus-typing-booster
-  inxi
-  iputils
-  ksuperkey
-  libffi
-  libpng
-  libssh
+  jre8-openjdk
   liburcu
-  libyaml
-  make
   mlocate
   muparser
   neofetch
   neovim
+  net-tools
   node-gyp
   noto-fonts
   noto-fonts-cjk
   noto-fonts-emoji
-  openssl
   openssl-1.0
-  otf-fira-code
   p7zip
-  pamac-snap-plugin
   postgresql-libs
   powerline
-  powerline-common
   powerline-fonts
   python
+  qpdf
   qpdfview
+  ranger
+  redshift
   rust
   simplescreenrecorder
-  snappy
   spotifyd
-  sqlite3
-  sudo
   telegram-desktop
   terminator
   thunar-archive-plugin
@@ -106,16 +77,12 @@ export PKG=(
   tmux
   traceroute
   transmission-gtk
-  trizen
   unzip
   vlc
-  wget
   whois
   xclip
   xfce4-clipman-plugin
-  yay
   zip
-  zlib
   zsh
 )
 
@@ -125,7 +92,7 @@ export AUR=(
   # apulse
   # balena-etcher
   # xdg-su
-  act
+  # act
   brave-bin
   chromium-widevine
   ctop
