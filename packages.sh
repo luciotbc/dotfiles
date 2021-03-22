@@ -77,22 +77,34 @@ export PKG=(
   tmux
   traceroute
   transmission-gtk
+  ttf-fira-code
   unzip
   vlc
   whois
+  wireless_tools
   xclip
   xfce4-clipman-plugin
+  xorg-fonts-100dpi
+  xorg-fonts-75dpi
   zip
   zsh
 )
 
 export AUR=(
+  # apulse
+  # nerd-fonts-anonymous-pro
+  # nerd-fonts-dejavu-complete
+  # nerd-fonts-fira-code
+  # nerd-fonts-go-mono
+  # nerd-fonts-inconsolata
+  # nerd-fonts-liberation-mono
+  # nerd-fonts-noto
+  # nerd-fonts-terminus
+  # xdg-su
   # zoom
   # zoom2
-  # apulse
-  # balena-etcher
-  # xdg-su
-  # act
+  act
+  balena-etcher
   brave-bin
   chromium-widevine
   ctop
@@ -100,7 +112,6 @@ export AUR=(
   google-chrome
   insync
   nerd-fonts-complete
-  nerd-fonts-fira-code
   nerd-fonts-source-code-pro
   nordvpn-bin
   postman-bin

@@ -1,17 +1,26 @@
 # ALIASES
-alias c="clear"
-alias v="nvim"
-alias vim="nvim"
 alias :q="exit"
-alias xx="exit"
+alias c="clear"
 alias cc="code ."
 alias count="find . -type f | wc -l"
+alias oo="open ."
+alias v="nvim"
+alias vim="nvim"
+alias xx="exit"
+alias daws="export AWS_PROFILE=default"
+alias caws="export AWS_PROFILE=ci"
+alias saws="export AWS_PROFILE=s3"
+alias xaws="export AWS_PROFILE=xavier"
 
 # System
-alias sysupdate="sudo pacman -Syu --needed --noconfirm && yay -Syu --needed --noconfirm && yay -Scc --noconfirm"
+alias sysupdate="sudo pacman -Syu --needed --noconfirm && yay -Syu --needed --noconfirm" # removi a limpeza de cache
+# alias sysupdate="sudo pacman -Syu --needed --noconfirm && yay -Syu --needed --noconfirm && yay -Scc --noconfirm"
 alias edot="code ~/.dotfiles"
 alias cddot="cd ~/.dotfiles"
 alias wifipass="sudo grep -r '^psk=' /etc/NetworkManager/system-connections"
+alias fixwifi="sudo systemctl restart dhcpcd NetworkManager systemd-resolved dnsmasq nscd"
+alias flush="sudo systemd-resolve --flush-caches && systemd-resolve --statistics"
+alias pg="ping google.com"
 
 # Local postgresql
 alias pgstart="sudo systemctl start postgresql.service"
@@ -29,8 +38,14 @@ alias dcu="docker-compose unpause"
 alias dcrr="docker-compose restart"
 alias g2m="sudo chown -R lucio:lucio"
 
+# Dip + Ruby
+alias drs="dip rspec"
+alias drt="dip rails test"
+
 # Git
 alias glogp="git log --oneline --pretty='%C(normal bold)%h%Creset - %Cblue%cn%Creset - %ad - %C(normal dim)%s%Creset' --date=short"
-
+alias gcsmg="git commit -m"
+alias gcmg='git commit -m'
+alias gcstg="git checkout staging"
 # My scripts
 alias rh="~/.lscripts/reconnect-headset.sh"
