@@ -8,9 +8,9 @@ alias v="nvim"
 alias vim="nvim"
 alias xx="exit"
 alias daws="export AWS_PROFILE=default"
-alias caws="export AWS_PROFILE=ci"
-alias saws="export AWS_PROFILE=s3"
-alias xaws="export AWS_PROFILE=xavier"
+alias awsci="export AWS_PROFILE=ci"
+alias awss3="export AWS_PROFILE=s3"
+alias awsxav="export AWS_PROFILE=xavier"
 
 # System
 alias sysupdate="sudo pacman -Syu --needed --noconfirm && yay -Syu --needed --noconfirm" # removi a limpeza de cache
