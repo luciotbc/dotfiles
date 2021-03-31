@@ -35,7 +35,23 @@ function please() {
 }
 
 function cwb() {
-  curl -H "Accept-Language: pt-BR" 'wttr.in/~'${1:-Curitiba}'+'$2'?'${3:-0}
+  curl -H "Accept-Language: pt-BR" 'wttr.in/~'${1:-Curitiba}$2'?'${3:-0}
+}
+
+function luna() {
+  curl -H "Accept-Language: pt-BR" 'wttr.in/~'${1:-Lunardelli}$2'?'${3:-0}
+}
+
+function myip() {
+  dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | awk -F'"' '{ print $2}'
+}
+
+function localip() {
+  /sbin/ip -o -4 addr list wlp3s0 | awk '{print $4}' | cut -d/ -f1
+}
+
+function localip6() {
+  /sbin/ip -o -6 addr list wlp3s0 | awk '{print $4}' | cut -d/ -f1
 }
 
 function mk() {
