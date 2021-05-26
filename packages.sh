@@ -108,6 +108,7 @@ export AUR=(
   brave-bin
   chromium-widevine
   ctop
+  espanso
   git-delta
   google-chrome
   insync
