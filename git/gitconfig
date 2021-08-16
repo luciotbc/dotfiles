@@ -17,7 +17,9 @@
   rebase = true
 [color]
   ui = true
-[core]
-  pager = delta --theme='ansi-dark'
-[interactive]
-  diffFilter = delta --color-only
+# [core]
+#   pager = delta --theme='ansi-dark'
+# [interactive]
+#   diffFilter = delta --color-only
+[diff]
+	ignoreSubmodules = dirty
