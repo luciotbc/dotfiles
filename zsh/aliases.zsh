@@ -27,8 +27,8 @@ alias ns="nordvpn status"
 alias nd="nordvpn d"
 
 # Image Convert
-alias heic2jpeg="ls *.HEIC -1 | sed -e 's/\.HEIC$//' | xargs -I {} convert {}.HEIC {}.jpeg"
-alias heic2png="ls *.HEIC -1 | sed -e 's/\.HEIC$//' | xargs -I {} convert {}.HEIC {}.png"
+alias heic2jpeg="ls *.(heic|HEIC) -1 | sed -e 's/\.HEIC$//' | xargs -I {} convert {}.HEIC {}.jpeg"
+alias heic2png="ls *.(heic|HEIC) -1 | sed -e 's/\.HEIC$//' | xargs -I {} convert {}.HEIC {}.png"
 alias jpeg2pdf="ls *.jpeg -1 | sed -e 's/\.jpeg$//' | xargs -I {} convert {}.jpeg {}.pdf"
 alias png2pdf="ls *.png -1 | sed -e 's/\.png$//' | xargs -I {} convert {}.png {}.pdf"
 
