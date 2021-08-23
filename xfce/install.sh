@@ -13,10 +13,10 @@ ln -sfT "$HOME/.dotfiles/xfce/termianl/terminalrc" "$HOME/.config/xfce4/terminal
 ln -sfT "$HOME/.dotfiles/xfce/termianl/accels.scm" "$HOME/.config/xfce4/terminal/accels.scm"
 
 echo_info "Backup default terminal settings..."
-mv "$HOME/..config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml" "$HOME/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml.bkp"
+mv "$HOME/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml" "$HOME/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml.bkp"
 
 echo_info "Symlink terminall settings..."
-ln -sfT "$HOME/.dotfiles/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml" "$HOME/..config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml"
+ln -sfT "$HOME/.dotfiles/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml" "$HOME/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml"
 
 
 
