@@ -46,7 +46,7 @@ alias ddv="docker volume rm $(docker volume ls -q)"
 alias dcp="docker-compose pause"
 alias dcu="docker-compose unpause"
 alias dcrr="docker-compose restart"
-alias g2m="sudo chown -R lucio:lucio"
+alias g2m="sudo chown -R lc:lc"
 
 # Dip + Ruby
 alias drs="dip rspec"

@@ -57,11 +57,13 @@ export PKG=(
   noto-fonts
   noto-fonts-cjk
   noto-fonts-emoji
+  openssh
   openssl-1.0
   p7zip
   postgresql-libs
   powerline
   powerline-fonts
+  pulseaudio-bluetooth
   python
   qpdf
   qpdfview
