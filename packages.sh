@@ -94,6 +94,7 @@ export PKG=(
 
 export AUR=(
   # apulse
+  # balena-etcher
   # nerd-fonts-anonymous-pro
   # nerd-fonts-dejavu-complete
   # nerd-fonts-fira-code
@@ -106,7 +107,6 @@ export AUR=(
   # zoom
   # zoom2
   act
-  balena-etcher
   brave-bin
   chromium-widevine
   ctop
