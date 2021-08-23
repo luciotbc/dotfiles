@@ -1,7 +1,7 @@
 [user]
   email = hi@lucio.app
   name = Lucio Charallo
-  signingkey = 1521A3764B78B771
+	signingkey = AFEC120E8ECF3AB4
 [github]
   user = luciotbc
 [web]
@@ -10,7 +10,7 @@
   editor = nvim
 [commit]
   verbose = true
-  gpgsign = true
+	gpgsign = true
 [branch]
   autosetuprebase = always
 [pull]
