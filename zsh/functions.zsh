@@ -43,7 +43,7 @@ function luna() {
 }
 
 function myip() {
-  dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | awk -F'"' '{ print $2}'
+  drill TXT +short o-o.myaddr.l.google.com @ns1.google.com | awk -F '"' '$2!=""{print $2}'
 }
 
 function localip() {

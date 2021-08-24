@@ -40,6 +40,7 @@ export PKG=(
   gcolor2
   gitg
   github-cli
+  gnome-keyring
   gnome-tweak-tool
   go
   gparted
@@ -47,6 +48,7 @@ export PKG=(
   ibus
   ibus-typing-booster
   jre8-openjdk
+  ldns
   liburcu
   mlocate
   muparser
@@ -82,6 +84,7 @@ export PKG=(
   ttf-fira-code
   unzip
   vlc
+  wget
   whois
   wireless_tools
   xclip
