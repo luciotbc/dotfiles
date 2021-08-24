@@ -18,7 +18,7 @@ alias sysupdate="sudo pacman -Syu --needed --noconfirm && yay -Syu --needed --no
 alias edot="code ~/.dotfiles"
 alias cddot="cd ~/.dotfiles"
 alias wifipass="sudo grep -r '^psk=' /etc/NetworkManager/system-connections"
-alias fixwifi="sudo systemctl restart dhcpcd NetworkManager systemd-resolved dnsmasq nscd"
+alias fixwifi="sudo systemctl restart dhcpcd NetworkManager systemd-resolved nscd" #dnsmasq
 alias flush="sudo systemd-resolve --flush-caches && systemd-resolve --statistics"
 alias pg="ping google.com"
 alias ncb="nordvpn c Brazil"
