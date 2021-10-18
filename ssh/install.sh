@@ -4,7 +4,7 @@
 . ../helpers.sh
 
 echo_info "Symlink ~/.ssh/config"
-mk "$HOME/.ssh"
+mkdir "$HOME/.ssh"
 
 ln -sfT "$HOME/.dotfiles/ssh/config" "$HOME/.ssh/config"
 

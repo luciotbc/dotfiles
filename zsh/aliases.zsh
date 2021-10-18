@@ -1,4 +1,4 @@
-# ALIASES
+# Alias
 alias :q="exit"
 alias c="clear"
 alias cc="code ."
@@ -18,7 +18,7 @@ alias sysupdate="sudo pacman -Syu --needed --noconfirm && yay -Syu --needed --no
 alias edot="code ~/.dotfiles"
 alias cddot="cd ~/.dotfiles"
 alias wifipass="sudo grep -r '^psk=' /etc/NetworkManager/system-connections"
-alias fixwifi="sudo systemctl restart dhcpcd NetworkManager systemd-resolved dnsmasq nscd"
+alias fixwifi="sudo systemctl restart dhcpcd NetworkManager systemd-resolved nscd" #dnsmasq
 alias flush="sudo systemd-resolve --flush-caches && systemd-resolve --statistics"
 alias pg="ping google.com"
 alias ncb="nordvpn c Brazil"
@@ -34,15 +34,15 @@ alias png2pdf="ls *.png -1 | sed -e 's/\.png$//' | xargs -I {} convert {}.png {}
 
 # Local postgresql
 alias pgstart="sudo systemctl start postgresql.service"
-alias pgstop="sudo systemctl enable postgresql.service"
+alias pgstop="sudo systemctl stop postgresql.service"
 alias pgenable="sudo systemctl enable postgresql.service"
 alias pgdisable="sudo systemctl disable postgresql.service"
 alias pgstatus="sudo systemctl status postgresql.service"
 
 # Docker
 alias dcupd="docker-compose up -d"
-alias ddc="docker rm -f $(docker ps -a -q)"
-alias ddv="docker volume rm $(docker volume ls -q)"
+# alias ddc="docker rm -f $(docker ps -a -q)"
+# alias ddv="docker volume rm $(docker volume ls -q)"
 alias dcp="docker-compose pause"
 alias dcu="docker-compose unpause"
 alias dcrr="docker-compose restart"

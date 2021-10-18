@@ -1,59 +1,50 @@
-#              _
-#             | |
-#      _______| |__  _ __ ___
-#     |_  / __| '_ \| '__/ __|
-#    _ / /\__ \ | | | | | (__
-#   (_)___|___/_| |_|_|  \___|
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-  # fzf
-  [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-  # start typing + [Up-Arrow] - fuzzy find history forward
-  if [[ "${terminfo[kcuu1]}" != "" ]]; then
-    autoload -U up-line-or-beginning-search
-    zle -N up-line-or-beginning-search
-    bindkey "${terminfo[kcuu1]}" up-line-or-beginning-search
-  fi
-  # start typing + [Down-Arrow] - fuzzy find history backward
-  if [[ "${terminfo[kcud1]}" != "" ]]; then
-    autoload -U down-line-or-beginning-search
-    zle -N down-line-or-beginning-search
-    bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
-  fi
-
-  # Z dir jump
-  [[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
-
-  # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-  # export PATH="$PATH:$HOME/.rvm/bin"
-
-  # Keyboard abnt2
-  setxkbmap -model abnt2 -layout br -variant ,abnt2
-
 fi
 
-# ASDF
-# source $DOTFILES/asdf/asdf.init
-fpath=(/home/lc/.asdf/completions /home/lc/.asdf/completions /home/lc/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting /home/lc/.oh-my-zsh/custom/plugins/zsh-autosuggestions /home/lc/.oh-my-zsh/plugins/tmux /home/lc/.oh-my-zsh/plugins/ruby /home/lc/.oh-my-zsh/plugins/history /home/lc/.oh-my-zsh/plugins/git /home/lc/.oh-my-zsh/plugins/fzf /home/lc/.oh-my-zsh/plugins/extract /home/lc/.oh-my-zsh/plugins/docker-compose /home/lc/.oh-my-zsh/plugins/docker /home/lc/.oh-my-zsh/plugins/git /home/lc/.oh-my-zsh/functions /home/lc/.oh-my-zsh/completions /usr/local/share/zsh/site-functions /usr/share/zsh/site-functions /usr/share/zsh/functions/Calendar /usr/share/zsh/functions/Chpwd /usr/share/zsh/functions/Completion /usr/share/zsh/functions/Completion/Base /usr/share/zsh/functions/Completion/Linux /usr/share/zsh/functions/Completion/Unix /usr/share/zsh/functions/Completion/X /usr/share/zsh/functions/Completion/Zsh /usr/share/zsh/functions/Exceptions /usr/share/zsh/functions/Math /usr/share/zsh/functions/MIME /usr/share/zsh/functions/Misc /usr/share/zsh/functions/Newuser /usr/share/zsh/functions/Prompts /usr/share/zsh/functions/TCP /usr/share/zsh/functions/VCS_Info /usr/share/zsh/functions/VCS_Info/Backends /usr/share/zsh/functions/Zftp /usr/share/zsh/functions/Zle)
-. /home/lc/.asdf/asdf.sh
-autoload -Uz compinit && compinit
+# Path to your oh-my-zsh installation.
+export ZSH="/home/lc/.oh-my-zsh"
 
-# ASDF Elixir
-export ERL_AFLAGS="-kernel shell_history enabled"
+# Uncomment the following line to change how often to auto-update (in days).
+export UPDATE_ZSH_DAYS=30
 
+# Uncomment the following line to enable command auto-correction.
+ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
+# See https://github.com/ohmyzsh/ohmyzsh/issues/5765
+COMPLETION_WAITING_DOTS="true"
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+export ARCHFLAGS="-arch x86_64"
+
+# User configuration
 export DOTFILES="$HOME/.dotfiles"
+
+# ASDF
+. $HOME/.asdf/asdf.sh
+
+export ERL_AFLAGS="-kernel shell_history enabled"
+# fpath=(/home/lc/.asdf/completions /home/lc/.asdf/completions /home/lc/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting /home/lc/.oh-my-zsh/custom/plugins/zsh-autosuggestions /home/lc/.oh-my-zsh/plugins/tmux /home/lc/.oh-my-zsh/plugins/ruby /home/lc/.oh-my-zsh/plugins/history /home/lc/.oh-my-zsh/plugins/git /home/lc/.oh-my-zsh/plugins/fzf /home/lc/.oh-my-zsh/plugins/extract /home/lc/.oh-my-zsh/plugins/docker-compose /home/lc/.oh-my-zsh/plugins/docker /home/lc/.oh-my-zsh/plugins/git /home/lc/.oh-my-zsh/functions /home/lc/.oh-my-zsh/completions /usr/local/share/zsh/site-functions /usr/share/zsh/site-functions /usr/share/zsh/functions/Calendar /usr/share/zsh/functions/Chpwd /usr/share/zsh/functions/Completion /usr/share/zsh/functions/Completion/Base /usr/share/zsh/functions/Completion/Linux /usr/share/zsh/functions/Completion/Unix /usr/share/zsh/functions/Completion/X /usr/share/zsh/functions/Completion/Zsh /usr/share/zsh/functions/Exceptions /usr/share/zsh/functions/Math /usr/share/zsh/functions/MIME /usr/share/zsh/functions/Misc /usr/share/zsh/functions/Newuser /usr/share/zsh/functions/Prompts /usr/share/zsh/functions/TCP /usr/share/zsh/functions/VCS_Info /usr/share/zsh/functions/VCS_Info/Backends /usr/share/zsh/functions/Zftp /usr/share/zsh/functions/Zle)
+# autoload -Uz compinit && compinit
 
 source $DOTFILES/zsh/plugins.zsh
 source $DOTFILES/zsh/theme.zsh
 source $DOTFILES/zsh/aliases.zsh
 source $DOTFILES/zsh/functions.zsh
 
-# Virtualbox
-VBOX_USB=usbfs
+source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

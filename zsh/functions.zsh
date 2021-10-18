@@ -43,7 +43,7 @@ function luna() {
 }
 
 function myip() {
-  dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | awk -F'"' '{ print $2}'
+  drill TXT +short o-o.myaddr.l.google.com @ns1.google.com | awk -F '"' '$2!=""{print $2}'
 }
 
 function localip() {
@@ -67,3 +67,18 @@ function drb() {
 function da() {
   docker attach $(docker-compose ps -q $1)
 }
+
+function cloneall() {
+    # Make the url to the input github organization's repository page.
+    ORG_URL="https://api.github.com/orgs/${1}/repos?per_page=200";
+
+    # List of all repositories of that organization (seperated by newline-eol).
+    ALL_REPOS=$(curl -s ${ORG_URL} | grep html_url | awk 'NR%2 == 0' \
+                | cut -d ':' -f 2-3 | tr -d '",');
+
+    # Clone all the repositories.
+    for ORG_REPO in ${ALL_REPOS}; do
+        git clone ${ORG_REPO}.git;
+    done
+}
+
