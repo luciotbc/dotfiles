@@ -14,6 +14,8 @@ plugins=(
 )
 
 source $DOTFILES/zsh/plugins/syntax-highlighting.zsh
+
+# Z dir jump
 [[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
 
 # Map fzf to CRLT+P

@@ -1,4 +1,4 @@
-# ALIASES
+# Alias
 alias :q="exit"
 alias c="clear"
 alias cc="code ."
@@ -34,15 +34,15 @@ alias png2pdf="ls *.png -1 | sed -e 's/\.png$//' | xargs -I {} convert {}.png {}
 
 # Local postgresql
 alias pgstart="sudo systemctl start postgresql.service"
-alias pgstop="sudo systemctl enable postgresql.service"
+alias pgstop="sudo systemctl stop postgresql.service"
 alias pgenable="sudo systemctl enable postgresql.service"
 alias pgdisable="sudo systemctl disable postgresql.service"
 alias pgstatus="sudo systemctl status postgresql.service"
 
 # Docker
 alias dcupd="docker-compose up -d"
-alias ddc="docker rm -f $(docker ps -a -q)"
-alias ddv="docker volume rm $(docker volume ls -q)"
+# alias ddc="docker rm -f $(docker ps -a -q)"
+# alias ddv="docker volume rm $(docker volume ls -q)"
 alias dcp="docker-compose pause"
 alias dcu="docker-compose unpause"
 alias dcrr="docker-compose restart"
