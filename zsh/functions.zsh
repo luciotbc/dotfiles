@@ -69,16 +69,30 @@ function da() {
 }
 
 function cloneall() {
-    # Make the url to the input github organization's repository page.
-    ORG_URL="https://api.github.com/orgs/${1}/repos?per_page=200";
+  # Make the url to the input github organization's repository page.
+  ORG_URL="https://api.github.com/orgs/${1}/repos?per_page=200"
 
-    # List of all repositories of that organization (seperated by newline-eol).
-    ALL_REPOS=$(curl -s ${ORG_URL} | grep html_url | awk 'NR%2 == 0' \
-                | cut -d ':' -f 2-3 | tr -d '",');
+  # List of all repositories of that organization (seperated by newline-eol).
+  ALL_REPOS=$(curl -s ${ORG_URL} | grep html_url | awk 'NR%2 == 0' |
+    cut -d ':' -f 2-3 | tr -d '",')
 
-    # Clone all the repositories.
-    for ORG_REPO in ${ALL_REPOS}; do
-        git clone ${ORG_REPO}.git;
-    done
+  # Clone all the repositories.
+  for ORG_REPO in ${ALL_REPOS}; do
+    git clone ${ORG_REPO}.git
+  done
 }
 
+# migrated to a script in lscripts/src/centercurrentwindow.sh
+# # Center current windows on the second monitor
+# function centercurrentwindow() {
+#   IFS='x' read screenWidth screenHeight < <(xdpyinfo | grep dimensions | grep -o '[0-9x]*' | head -n1)
+
+#   width=$(xdotool getactivewindow getwindowgeometry --shell | head -4 | tail -1 | sed 's/[^0-9]*//')
+#   height=$(xdotool getactivewindow getwindowgeometry --shell | head -5 | tail -1 | sed 's/[^0-9]*//')
+
+#   ## I added + 683 to center only on the second monitor
+#   newPosX=$((screenWidth / 2 - width / 2 + 683))
+#   newPosY=$((screenHeight / 2 - height / 2))
+
+#   xdotool getactivewindow windowmove "$newPosX" "$newPosY"
+# }

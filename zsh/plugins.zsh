@@ -1,12 +1,13 @@
 # PLUGINS
 
 plugins=(
-  git
   docker
   docker-compose
   extract
   fzf
+  git
   history
+  rails
   ruby
   tmux
   zsh-autosuggestions

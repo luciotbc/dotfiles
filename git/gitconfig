@@ -17,9 +17,18 @@
   rebase = true
 [color]
   ui = true
-# [core]
-#   pager = delta --theme='ansi-dark'
-# [interactive]
-#   diffFilter = delta --color-only
+[core]
+  pager = delta
+[interactive]
+  diffFilter = delta --color-only
 [diff]
-	ignoreSubmodules = dirty
+  ignoreSubmodules = dirty
+  colorMoved = default
+[delta]
+  navigate = true
+  features = side-by-side decorations
+[delta "decorations"]
+  commit-decoration-style = bold yellow box ul
+  file-style = bold yellow ul
+  file-decoration-style = none
+  hunk-header-decoration-style = cyan box ul
