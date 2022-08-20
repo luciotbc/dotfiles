@@ -1,5 +1,5 @@
 elixir 1.9.1
 erlang 22.3.4
-nodejs 12.19.0
-ruby 2.7.1
+nodejs 14.18.2
+ruby 2.6.10
 yarn 1.19.1
